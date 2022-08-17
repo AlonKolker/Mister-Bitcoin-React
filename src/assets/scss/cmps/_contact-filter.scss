@@ -3,12 +3,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .filter-inputs{
-
+  .filter-inputs {
     display: flex;
-    margin-top: 10px;
-    gap: 10px;
-    // flex-direction: row;
 
+    input {
+      border-radius: 10px;
+      height: 30px;
+      width: 170px;
+      font-size: 18px;
+      border: 3px solid #0077b6;
+      margin-inline-end: 10px;
+    }
   }
 }

@@ -27,6 +27,7 @@ export class MarketPrice extends Component {
             borderColor: "rgba(75,192,192,1)",
           },
         ],
+        
       }
       // console.log(newData);
       this.setState({ updatedMarketPrice: newData })
@@ -39,7 +40,7 @@ export class MarketPrice extends Component {
     const { updatedMarketPrice } = this.state
     if (!updatedMarketPrice) return <span>Loading</span>
     return (
-      <div>
+      <div className="MarketPrice}">
         <Line data={updatedMarketPrice} />
       </div>
     )

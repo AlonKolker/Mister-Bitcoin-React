@@ -1,48 +1,31 @@
-import React, { Component } from "react"
+import { Component } from "react"
 import { userService } from "../services/user.service"
+import btc4 from "../assets/imgs/btc4.png"
 
 export class Signup extends Component {
   state = {
     name: "",
   }
 
-  // handleChange = ({ target }) => {
-  //     // const field = target.name
-  //     // const value = target.type === "number" ? +target.value || "" : target.value
-  //     this.setState({name:target.value})
-  //   }
-
-  //   onSaveUser =  (ev) => {
-  //     console.log('sfsdf');
-  //     ev.preventDefault()
-  //    let ans =  userService.signUp(this.state.name)
-  //    if(ans == true) this.props.history.push("/")
-  //    return
-  //   }
-
-  //   inputRefFunc = (elInput) => {
-  //     elInput && elInput.focus()
-  // }
-
   onSaveUser = (ev) => {
     ev.preventDefault()
     const { value } = ev.target.elements.name
     userService.signUp(value)
-     this.props.history.push("/")
+    this.props.history.push("/")
     return
   }
 
   render() {
     const { name } = this.state
     return (
-      <div>
-        <pre>{name}</pre>
-        <h1>Sign up</h1>
-        <form onSubmit={this.onSaveUser} className=''>
-          <label htmlFor='name'>Name</label>
-          <input type='text' name='name' id='name' />
+      <div className="signup-conteiner">
+        <h1 className="signup-heder">Sign up</h1>
+        <img className="signup-btc-icon" src={btc4} alt="" />
+        <form className="signup-form" onSubmit={this.onSaveUser} >
+          <label htmlFor='name'></label>
+          <input className="signup-form-input" type='text' name='name' id='name' placeholder="Enter your name" />
           <button>Save</button>
-        </form>
+        </form>        
       </div>
     )
   }

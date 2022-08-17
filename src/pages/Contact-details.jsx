@@ -47,7 +47,6 @@ export class ContactDeatails extends Component {
 
   render() {
     const { contact, userMoves } = this.state
-
     if (!contact) return <div>Loading Deatails...</div>
     // const contactImg =  `https://robohash.org/${contact._id}`
     const contactImg = `https://i.pravatar.cc/150?u=${contact._id}`
@@ -69,7 +68,7 @@ export class ContactDeatails extends Component {
             <div>Email: {contact.email}</div>
           </div>
           <TransferFund contact={contact} onTransfer={this.onTransfer} />
-          <button onClick={this.onBack}>Go back</button>
+          <button className="nice-button details-go-back-btn" onClick={this.onBack}>Go back</button>
         </div>
         <MovesList  contact={contact} moves={userMoves} title={"Your Moves:"} />
       </div>

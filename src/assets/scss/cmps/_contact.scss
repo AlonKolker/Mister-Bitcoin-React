@@ -1,21 +1,38 @@
 .contacts-conteiner {
+  padding-top: 30px;
   .add-new-contact-btn {
     margin-inline-start: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    width: fit-content;
-    // border: 1px solid gold ;
-    box-shadow: rgba(147, 128, 25, 0.3) 0px 0px 0px 1px;
-    text-decoration: none;
-    border-radius: 1px;
-    background-color: #48CAE4;
-    padding: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &:hover{
-        background-color: rgb(118, 165, 203);
+    margin-inline-end: 20px;
+  
+    font-size: 22px;
 
+        display: inline-block;
+      outline: 0;
+      border: 0;
+      padding: 5px;
+      cursor: pointer;
+      will-change: box-shadow, transform;
+      background: radial-gradient(100% 100% at 100% 0%, #89e5ff 0%, #5468ff 100%);
+      box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+      border-radius: 6px;
+      color: #fff;
+      text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+      :hover {
+        box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+        transform: translateY(-2px);
+      }
+      :active {
+        box-shadow: inset 0px 3px 7px #3c4fe0;
+        transform: translateY(2px);
+      }
     }
-}
-}
+    .contact-options-box{
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      justify-items: center;
+      align-content: center;
+    }
+  }
+

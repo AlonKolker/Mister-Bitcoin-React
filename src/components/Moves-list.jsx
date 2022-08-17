@@ -1,13 +1,15 @@
 import React from "react"
 
 export function MovesList({ contact, moves, title }) {
-  if(!moves) return
+  if(!moves || !moves.length) return
   let newMoves
-  if (contact !== null) newMoves = moves.filter((move) => move.to === contact.name)
-  if (contact === null) newMoves = moves.filter((move) => move.to === move.to)
+  if (contact !== null) newMoves = moves.filter((move) => move.to === contact.name)//For contact details page
+  if (contact === null) newMoves = moves.filter((move) => move.to === move.to)//For home page
+  if(!newMoves.length) return
+
   return (
     <section className="move-list">
-      <h1>{title}:</h1>
+      <h1>{title}</h1>
       {newMoves.map((move, idx) => {
         return (
           <div className="move" key={idx}>

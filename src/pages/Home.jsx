@@ -1,11 +1,10 @@
-// import React, { Component } from "react"
-
-// export function Home({btc,user}) {
-import React, { Component } from "react"
+import { Component } from "react"
 import { userService } from "../services/user.service"
 import { bitcoinService } from "../services/bitcoin.service"
 import { MovesList } from "../components/Moves-list"
-import btc1 from "../assets/imgs/btc1.png"
+import avatar from "../assets/imgs/bitcoin-man.ipg"
+// import avatar from "../assets/imgs/avatar4.jpg"
+
 export class Home extends Component {
   state = {
     user: null,
@@ -36,13 +35,15 @@ export class Home extends Component {
     return (
       <section className='home-page-conteiner'>
         
-        <div>🎈
-        {/* <img className="home-bitcoin-logo" src={btc1} alt="../img" /> */}
+        <div>
+        <img className="home-bitcoin-logo" src={avatar} alt="" />
         </div>
-        <div>Hello Dear user: {user.name}!</div>
-        <div>💰Coins:{user.coins}</div>
-        <div>BTC:{btc}</div>
-        <MovesList contact={null} moves={userMoves} title={`Your last ${userMoves.length} moves`} />
+        <div className="home-header">Hello Dear {user.name}!</div>
+        <div className="home-user-balance">
+        <div>Your Coins: {user.coins} 💰</div>
+        <div>Your coins in BTC: {btc}</div>
+        </div>
+        <MovesList contact={null} moves={userMoves} title={userMoves.length? `Your last ${userMoves.length} moves:`:'Your didnt make a move yet'} />
       </section>
     )
   }

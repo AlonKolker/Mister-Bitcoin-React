@@ -18,7 +18,6 @@ export class ContactFilter extends Component {
     const { name, phone } = this.state
     return (
       <form className='contact-filter'>
-        <span>Filter</span>
         <div  className="filter-inputs">
         <section>
           <label htmlFor='name'></label>

@@ -1,11 +1,28 @@
-.home-page-conteiner{
-    box-sizing: unset;
-    margin: 0 auto;
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // background-color:#D9D9D9 ;
+.home-page-conteiner {
+  // color: gold;
+  box-sizing: unset;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color:#D9D9D9 ;
+  .home-header {
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .home-bitcoin-logo{
+    margin-top: 50px;
+    width: 250px;
+  }
+  .home-user-balance{
+font-weight: 500;
+font-size: 20px;
+margin: 20px 0 20px 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+  }
 }
