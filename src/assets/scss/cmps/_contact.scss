@@ -1,0 +1,21 @@
+.contacts-conteiner {
+  .add-new-contact-btn {
+    margin-inline-start: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    width: fit-content;
+    // border: 1px solid gold ;
+    box-shadow: rgba(147, 128, 25, 0.3) 0px 0px 0px 1px;
+    text-decoration: none;
+    border-radius: 1px;
+    background-color: #48CAE4;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        background-color: rgb(118, 165, 203);
+
+    }
+}
+}

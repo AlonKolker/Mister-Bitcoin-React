@@ -1,0 +1,19 @@
+.app-header {
+  // width: 1400px;
+  background-color: #0077B6;
+  align-items: center;
+  box-sizing: unset;
+  padding: 10px 60px 10px 60px;
+
+  .logo-name{
+    color: gold;
+    font-weight: 600;
+  }
+  nav {
+    color: whitesmoke;
+    font-weight: 600;
+    a:not(:last-of-type) {
+      margin-inline-end: 8px;
+    }
+  }
+}

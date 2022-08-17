@@ -1,0 +1,54 @@
+// Externals
+
+// Setup
+@import "setup/variables";
+// @import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+// @import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+// @import "basics/modals";
+// @import "basics/animations";
+
+// Pages
+
+// Components
+// @import "cmps/robot-list";
+// @import "cmps/robot-preview";
+@import "cmps/app-header";
+@import "cmps/hader";
+@import "cmps/contact-preview";
+@import "cmps/contact-list";
+@import "cmps/contact-filter";
+@import "cmps/contact";
+@import "cmps/home-page";
+@import "cmps/_contact-deatils";
+@import "cmps/_contact-edit";
+@import "cmps/_user-moves";
+
+.main-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex-grow: 1;
+  }
+
+  > footer {
+    background-color: #111;
+    color: white;
+  }
+}
+
+.main-conteiner {
+  margin: 10px 40px 10px 40px;
+  // margin: 0 auto;
+}
+.contacts-conteiner-app {
+
+}
+

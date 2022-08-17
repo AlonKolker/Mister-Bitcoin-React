@@ -1,0 +1,14 @@
+.contact-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .filter-inputs{
+
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    // flex-direction: row;
+
+  }
+}

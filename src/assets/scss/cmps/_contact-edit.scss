@@ -1,0 +1,21 @@
+.contact-edit-conteiner {
+    display: flex;
+    justify-content: center;
+    
+  .contact-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    button {
+      width: 100px;
+      margin-top: 15px;
+      margin-inline-start: 5px;
+    }
+    .edit-contact-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+}
