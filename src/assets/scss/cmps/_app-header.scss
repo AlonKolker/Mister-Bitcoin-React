@@ -1,17 +1,42 @@
 .app-header {
   // width: 1400px;
-  background-color: #0077B6;
+  background-color: whitesmoke;
   align-items: center;
   box-sizing: unset;
   padding: 10px 60px 10px 60px;
 
-  .logo-name{
-    color: gold;
-    font-weight: 600;
+  .logo-conteiner{
+display: flex;
+justify-content: center;
+align-items: center;
+    .logo-name{
+      color: rgb(96, 85, 21);
+      font-weight: 600;
+    }
+    .signup-btc-icon {
+      // margin: 50px 0 0 0;
+      animation: spin 8s linear infinite;
+      width:30px;
+      height:30px;
+      
+      margin-inline-start: 10px;
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+      }
+    }
   }
+}
   nav {
-    color: whitesmoke;
+    color: rgb(96, 85, 21);
     font-weight: 600;
+    font-size: 22px;
+    gap: 10px;
+    a.active{
+// text-decoration: underline;
+font-weight: 800;
+color: gold;
+    }
     a:not(:last-of-type) {
       margin-inline-end: 8px;
     }

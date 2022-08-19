@@ -58,14 +58,14 @@ export class ContactDeatails extends Component {
               🗑 Remove
             </div>
             <NavLink className='edit-contact-logo' to={`/contact/edit/${contact._id}`}>
-              Edit 🖊
+            🖊 Edit 
             </NavLink>
           </div>
           <div className='main-content'>
             <img className='contact-img' src={contactImg} alt='' />
-            <div>name: {contact.name}</div>
-            <div>Phone: {contact.phone}</div>
-            <div>Email: {contact.email}</div>
+            <div> <span className="deatil"> Name: </span>{contact.name}</div>
+            <div><span className="deatil">Phone:</span> {contact.phone}</div>
+            <div><span className="deatil">Email:</span> {contact.email}</div>
           </div>
           <TransferFund contact={contact} onTransfer={this.onTransfer} />
           <button className="nice-button details-go-back-btn" onClick={this.onBack}>Go back</button>

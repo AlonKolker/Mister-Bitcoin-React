@@ -12,22 +12,23 @@ async function getRate(coins) {
   //  return btc
 }
 
-async function getMarketPrice() {
+async function getMarketPrice(timePeriod='10') {
+  // console.log(timePeriod);
 //   console.log("getMarketPrice")
   let marketPrices = null
   await axios
-    .get(`https://api.blockchain.info/charts/market-price?timespan=10months&format=json&cors=true`)
+    .get(`https://api.blockchain.info/charts/market-price?timespan=${timePeriod}months&format=json&cors=true`)
     .then((res) => (marketPrices = res.data))
   //  console.log(marketPrices);
 
   return marketPrices
 }
 
-async function getConfirmedTransactions() {
+async function getConfirmedTransactions(timePeriod='10') {
   // console.log('ConfirmedTransactions');
   let ConfirmedTransactions = null
   await axios
-    .get(`https://api.blockchain.info/charts/trade-volume?timespan=10months&format=json&cors=true`)
+    .get(`https://api.blockchain.info/charts/trade-volume?timespan=${timePeriod}months&format=json&cors=true`)
     .then((res) => (ConfirmedTransactions = res.data))
 
   return ConfirmedTransactions

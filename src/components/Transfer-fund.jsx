@@ -2,9 +2,9 @@ import React from "react"
 
 export function TransferFund({ contact, onTransfer }) {
   return (
-    <section>
+    <section className="transfer-fund">
       {/* <div>{contactMoves? contactMoves: 'Th'}</div> */}
-      <div>Transfer coins to {contact.name}</div>
+      <h3>Transfer coins to {contact.name}</h3>
       <form
         onSubmit={(ev) => {
           ev.preventDefault()
@@ -12,8 +12,8 @@ export function TransferFund({ contact, onTransfer }) {
         }}
       >
         <label htmlFor='amount'></label>
-        <input type='text' id='amount' name='amount' />
-        <button>Transfer</button>
+        <input type='text' id='amount' name='amount' placeholder="Enter coins amount" />
+        <button className="transfer-btn">Transfer</button>
       </form>
     </section>
   )
