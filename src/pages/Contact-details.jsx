@@ -28,8 +28,8 @@ export class ContactDeatails extends Component {
     let contact = await contactService.getContactById(contactId)
     this.setState({ contact })
   }
-  getCurrUser() {
-    let userMoves = userService.getUser().moves
+  async getCurrUser() {
+    let userMoves =  await userService.getUser().moves
     this.setState({ userMoves })
   }
   async onRemoveContact(contactId) {
@@ -42,7 +42,13 @@ export class ContactDeatails extends Component {
   onTransfer = (val, name) => {
     console.log("onTransfer", name)
     let ans = userService.updateBalance(val, name)
-    if (ans === false) alert("More then your coins balance")
+    if (ans === false) return alert("More then your coins balance")
+   
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.userMoves !== this.state.userMoves) {
+      this.getCurrUser()
+    }
   }
 
   render() {
