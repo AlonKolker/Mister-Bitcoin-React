@@ -45,11 +45,11 @@ export class ContactDeatails extends Component {
     if (ans === false) return alert("More then your coins balance")
    
   }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.userMoves !== this.state.userMoves) {
-      this.getCurrUser()
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.userMoves !== this.state.userMoves) {
+  //     this.getCurrUser()
+  //   }
+  // }
 
   render() {
     const { contact, userMoves } = this.state

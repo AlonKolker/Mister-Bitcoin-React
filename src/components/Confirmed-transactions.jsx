@@ -54,7 +54,7 @@ export class ConfirmedTransactions extends Component {
     const { dailyTransitons, timePeriod } = this.state
     if (!dailyTransitons) return <span>Loading</span>
     return (
-      <div>
+      <div className="confirmed-transitons">
         <select name='timePeriod'  value={timePeriod} onChange={this.handleChange}>
           <option value='10'>10 Months</option>
           <option value='2'>2 Months</option>

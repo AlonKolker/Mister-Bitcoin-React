@@ -52,7 +52,7 @@ export class MarketPrice extends Component {
     const { updatedMarketPrice, timePeriod } = this.state
     if (!updatedMarketPrice) return <span>Loading</span>
     return (
-      <div className='MarketPrice}'>
+      <div className='MarketPrice'>
  <select name='timePeriod'  value={timePeriod} onChange={this.handleChange}>
           <option value='10'>10 Months</option>
           <option value='2'>2 Months</option>
