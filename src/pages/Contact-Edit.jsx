@@ -19,10 +19,12 @@ export class ContactEdit extends Component {
     const field = target.name
     const value = target.type === "number" ? +target.value || "" : target.value
     this.setState((prevState) => ({ contact: { ...prevState.contact, [field]: value } }))
+    console.log(this.state.contact);
   }
 
   onSaveContact = async (ev) => {
     ev.preventDefault()
+    // console.log(...this.state.contact );
     await contactService.saveContact({ ...this.state.contact })
     this.props.history.push("/contact")
   }
@@ -46,11 +48,11 @@ export class ContactEdit extends Component {
           <input className="edit-input"  ref={this.inputRefFunc} value={contact.phone} onChange={this.handleChange} type='text' name='phone' id='phone' />
           <label htmlFor='email'>Email</label>
           <input  className="edit-input" ref={this.inputRefFunc} value={contact.email} onChange={this.handleChange} type='text' name='email' id='email' />
-        </form>
         <div className="flex">
           <button className="nice-button">Save</button>
         <button className="nice-button" onClick={this.props.history.goBack}>Back</button>
         </div>
+        </form>
         </div>
       </section>
     )
